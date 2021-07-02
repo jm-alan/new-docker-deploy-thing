@@ -1,0 +1,17 @@
+.messenger-container {
+  height: calc(100vh - 220px);
+  width: 100vw;
+  display: flex;
+}
+
+.conversation-list, .chat-container {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.conversation-list {
+  width: 25vw;
+  border-right: 1px solid var(--good-pink);
+}

@@ -1,0 +1,161 @@
+#div__search_bar {
+  flex-direction: row;
+  border: 1px solid rgb(203, 203, 203);
+  background-color: rgb(235, 235, 235);
+  border-radius: 5em;
+  font-family: Roboto, Helvetica Neue, sans-serif;
+}
+
+#div__search_bar :is(input, button:not([type='submit'])) {
+  padding: 0px;
+}
+
+#div__search_bar * {
+  border: none;
+}
+
+.div__search_section {
+  display: inline-block;
+  border-radius: 0;
+  box-sizing: border-box;
+  vertical-align: center;
+  padding: 0.5em 0.7em 0.3em 0.7em;
+  min-height: 62px;
+}
+
+.div__search_section input,
+.div__search_section button {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 740px) {
+  .div__search_section:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px dotted #ff3a5c;
+    border-top: 1px dotted lightgrey;
+    filter: drop-shadow(0em 1em 0.2em rgba(235, 235, 235, 0.4));
+  }
+  .div__search_section {
+    border-bottom: 1px inset rgb(203, 203, 203);
+    border-top: 1px solid rgb(203, 203, 203);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #div__search_bar {
+    flex-direction: column;
+    border-radius: 2em;
+    text-align: center !important;
+  }
+  div.div__search_section {
+    display: block;
+    border-radius: 0 !important;
+    border-bottom: 1px dotted rgb(142, 142, 142);
+  }
+  div.div__search_section:nth-last-of-type(1) {
+    display: block;
+    border: 0;
+    margin: 0 auto;
+  }
+  .div__search_section button {
+    cursor: pointer;
+  }
+  div.div__search_section:hover {
+    background-color: rgba(255, 255, 255, 0);
+    filter: none;
+  }
+
+  div.div__search_section:hover:not(div.div__search_section:nth-last-of-type(1)) {
+    border-bottom: 1px dotted #ff3a5c;
+  }
+
+  div.rdrDateRangePickerWrapper {
+    flex-direction: row;
+    transform: scale(0.75);
+    top: 20vh;
+    left: 0;
+    border: 0;
+  }
+  .label__move_over {
+    margin-left: -20px;
+  }
+}
+
+.div__search_section button:focus {
+  outline: none;
+}
+
+.div__search_section:nth-of-type(1) {
+  /* location input styling */
+  padding: 0.5em 0.2em 0.5em 2em;
+  border-radius: 5em 0 0 5em;
+}
+
+.div__search_section:nth-last-of-type(1) {
+  /* submit input styling */
+  color: white;
+  font-size: 1.2em;
+  border-radius: 0 5em 5em 0;
+  vertical-align: top;
+}
+
+.div__search_section:nth-last-of-type(1) button {
+  padding: 1em;
+  background-color: #ff3a5c;
+  color: white;
+  border-radius: 5em;
+}
+
+.div__search_section label {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.04 em;
+  padding-bottom: 2px;
+}
+
+.div__search_section input {
+  background: none;
+  border: none;
+  line-height: 20px;
+}
+
+.div__search_section button {
+  border: 0;
+  background: 0;
+  color: rgb(111, 111, 111);
+}
+
+.label__hidden {
+  display: none;
+}
+
+.button__filter {
+  font-size: 14px;
+  line-height: 16px;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+}
+
+.button__filter:active,
+.button__filter:focus {
+  outline: none;
+}
+
+.div__dates-width {
+  min-width: 130px;
+  cursor: pointer;
+}
+
+.div__guests-width {
+  display: flex;
+  flex-direction: row;
+}
+
+/* BELOW IS FOR REMOVING INPUT NUMBER'S (GUESTS) ARROWS */
+
+/* input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+} */

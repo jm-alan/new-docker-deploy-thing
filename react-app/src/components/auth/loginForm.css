@@ -1,0 +1,8 @@
+.div__container_form.login {
+    background: center url(campus-2.png);
+}
+
+.form__container_div input {
+    width: 100%;
+    padding: 0 10px;
+}
